@@ -17,7 +17,7 @@ In the file it can be used as a comparison check against RunningMedian
 This is the main implementation, it's run time for M sized window over a
 N long sequence is O(N * log(M)).
 
-To put it in numbers, see this table obtaing with a Core i7:
+To put it in numbers, see this table obtained with a Core i7:
 
 |     N     |    M    |  time  |
 |-----------|---------|--------|
