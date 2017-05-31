@@ -15,9 +15,17 @@ In the file it can be used as a comparison check against RunningMedian
 ## RunningMedian
 
 This is the main implementation, it's run time for M sized window over a
-N long sequence is N*log(M). To put it in numbers, a Core i7 does 1K
-window over 50K seq. in under a second or a 10K window over 100K sequence
-in under two seconds. If you need to do your own speed tests just adjust
+N long sequence is O(N * log(M)).
+
+To put it in numbers, see this table obtaing with a Core i7:
+
+|     N     |    M    |  time  |
+|-----------|---------|--------|
+|    10,000 |   1,000 |  0.2 s |
+|   100,000 |  10,000 |  1.6 s |
+| 1,000,000 | 100,000 | 45.1 s |
+
+If you need to do your own speed tests just adjust
 SAMPLES and WINDOW_SIZE and run the file.
 
 # Usage
