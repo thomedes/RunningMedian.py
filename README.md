@@ -2,6 +2,8 @@
 
 Efficient running median in plain Python
 
+Have a look at the sibling project [RunningMedian.cpp](https://github.com/thomedes/RunningMedian.cpp)
+
 This sub 100 lines file contains two different implementation of running
 median:
 
@@ -30,7 +32,7 @@ SAMPLES and WINDOW_SIZE and run the file.
 
 # Usage
 
-For a simple example have a look at the main() function:
+For a simple example have a look at the `main()` function:
 
 ```python
     w = RunningMedian(WINDOW_SIZE)
