@@ -1,3 +1,6 @@
+from ring import Ring
+
+
 def median(s):
     """Returns the median of the _already__sorted list s"""
     size = len(s)
@@ -55,15 +58,11 @@ class SortedVector:
 class RunningMedian:
 
     def __init__(self, window_size):
-        self._ring = [None] * window_size
-        self._head = 0
+        self._ring = Ring(window_size)
         self._sorted = SortedVector()
 
     def insert(self, x):
-        current = self._ring[self._head]
-        self._ring[self._head] = x
-        self._head = (self._head + 1) % len(self._ring)
-
+        current = self._ring.insert(x)
         if current is not None:
             self._sorted.remove(current)
         self._sorted.insert(x)
