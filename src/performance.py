@@ -1,7 +1,7 @@
 import random
 
-from time_it import TimeIt
-from running_median import compute_median
+from .time_it import TimeIt
+from .running_median import compute_median
 
 
 def generate_samples(samples):

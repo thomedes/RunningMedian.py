@@ -1,4 +1,4 @@
-from median import RunningMedian, NaiveRunningMedian
+from .median import RunningMedian, NaiveRunningMedian
 
 
 def compute_naive_median(samples, window_size, display):

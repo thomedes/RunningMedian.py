@@ -1,4 +1,4 @@
-from ring import Ring
+from .ring import Ring
 
 
 def median(s):
