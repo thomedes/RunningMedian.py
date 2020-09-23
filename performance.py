@@ -16,8 +16,8 @@ def performance_measurement(samples, window_size, mode='running', rounds=5):
 
 def do_performance_tests():
     testcases = []
-    for samples in range(1, 100000):
-        for window_size in range(1, samples, int(samples / 10)):
+    for samples in range(1, 100000, 10000):
+        for window_size in range(1, samples, int(samples / 10) or 1):
             data = samples, window_size
             testcases.append(data)
     print('{:>10s} {:>10s} {:10s} {:>10s} {:>10s} {:>10s}'.format(
