@@ -1,6 +1,6 @@
 import random
 
-from .running_median import compute_median
+from running_median.example import compute_median
 
 
 def generate_samples(samples):
