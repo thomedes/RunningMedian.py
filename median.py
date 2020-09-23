@@ -1,5 +1,3 @@
-#! /usr/bin/env python3
-
 def median(s):
     """Returns the median of the _already__sorted list s"""
     size = len(s)
@@ -72,30 +70,3 @@ class RunningMedian:
 
     def median(self):
         return median(self._sorted)
-
-
-def main(samples, window_size, check=False, display=1000):
-    import random
-
-    running = RunningMedian(window_size)
-    naive = NaiveRunningMedian(window_size)  # For comparison checks
-
-    for i in range(samples):
-        sample = random.randint(0, 1000)
-
-        running.insert(sample)
-        running_median = running.median()
-
-        # Print something regularly
-        if i % display == 0:
-            print("%5d\t%d" % (i, running_median))
-
-        # Check against naive implementation
-        if check:
-            naive.insert(sample)
-            naive_median = naive.median()
-            assert naive_median == running_median, "%d != %d" % (running_median, naive_median)
-
-
-if __name__ == "__main__":
-    main(100000, 10000, False)
